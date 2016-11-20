@@ -17,6 +17,16 @@ body.collection {
     text-align: center;
 }
 
+.collection-album-conatiner .caption {
+  margin-top: 10px;
+}
+
+.collection-album-container .capiton p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+}
+
 .collection-album-container .caption p a {
     color: rgba(255,255,255,0.6);
 }
