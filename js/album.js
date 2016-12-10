@@ -28,6 +28,21 @@ var albumMarconi = {
     ]
 };
 
+var albumMarimba = {
+  title: 'Marimba',
+  artist: 'Ney Ressaro',
+  label: 'rowloff',
+  year: '2006',
+  albumArtUrl: 'assets/images/prelude-no1.png',
+  songs: [
+    {title: 'Prelude No. 1', duration: '10:26'},
+    {title: 'Stubernik', duration: '10:32'},
+    {title: 'Two Mexican Dances', duration: '5:12'},
+    {title: 'Astraldance', duration: '6:53'},
+    {title: 'Parody', duration: '7:14'}
+  ]
+};
+
 var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
@@ -59,6 +74,20 @@ var createSongRow = function(songNumber, songName, songLength) {
     }
 };
 
+var albumList = [albumPicasso, albumMarconi, albumMarimba];
+var index = 0;
+
+function coverClick(){
+  window.addEventListener("click", function(e){
+    setCurrentAlbum(albumList[index]);
+    index++;
+    if (index == albumList.length){
+      index = 0;
+    }
+    //setCurrentAlbum(albumList[Math.floor(Math.random() * 3)])
+  })
+};
+
 window.onload = function() {
-    setCurrentAlbum(albumPicasso);
+  setCurrentAlbum(albumPicasso);
 };
